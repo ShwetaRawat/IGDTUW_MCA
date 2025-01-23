@@ -12,11 +12,12 @@ This repository contains useful resources for IGDTUW MCA.
         - Inside `sem 2nd`, create a folder named `2023-2025` (if it doesn’t already exist).
         - Add your materials in the appropriate subfolder.
         - e.g. 
-                sem 2nd/
-                    └── 2023-2025/
-                        ├── 1. OOP with JAVA/
-                              ├── Notes.pdf
-                    
+        ```plaintext
+        sem 2nd/
+            └── 2023-2025/
+                ├── 1. OOP with JAVA/
+                    ├── Notes.pdf
+        ```
 
 2. **Exam Papers**:  
    Previous year question papers (PYQs) are not categorized by batches.  
