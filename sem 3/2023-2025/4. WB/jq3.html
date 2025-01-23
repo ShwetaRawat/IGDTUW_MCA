@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery CSS Manipulation Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#changeColorButton").click(function() {
+                $("#myBox").css("background-color", "blue");
+            });
+        });
+    </script>
+    <style>
+        #myBox {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="myBox"></div>
+    <button id="changeColorButton">Change Color</button>
+</body>
+</html>

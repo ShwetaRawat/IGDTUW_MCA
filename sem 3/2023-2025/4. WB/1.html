@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>IGNOU</title>
+    <meta name="keywords" content="HTML5, IGNOU, application">
+</head>
+
+<body>
+    <h3><a name="top"> Application Form</a></h3>
+    <form name="HTMLForm” method="get" action="">
+        <table border="20">
+            <tr>
+                <td>Name of Applicant:<input type="text" name="FName" size="20" maxlength="50">
+                </td>
+                <td>Gender:
+
+                    <select name="Gender">
+                        <option value="">Male</option>
+                        <option value="">Female</option>
+                    </select>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend>Address Details</legend>
+                        Current Address: <input type="text" name="caddress" size="40" maxlength="50">
+                        <br />
+                        Parmanent Address :<input type="text" name="Paddress" size="40" maxlength="50">
+                    </fieldset>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>City :
+
+                    <select>
+                        <optgroup label="Assam">
+                            <option value="">Dibrugarh</option>
+                            <option value="">Jorhat</option>
+                        </optgroup>
+                        <optgroup label="Punjab">
+                            <option value="">Amritsar</option>
+                            <option value="">Jalandhar</option>
+                        </optgroup>
+                    </select>
+
+                </td>
+                <td>Country:
+                    <select name="country" size="2">
+                        <option value="">India</option>
+                        <option value="">Nepal</option>
+                        <option value="">Canada</option>
+                        <option value="">USA</option>
+                    </select>
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <table border="10" cellpadding="5" cellspacing="10" width="40%">
+                        <tr>
+                            <td>Examination</td>
+                            <td>University/Board</td>
+                            <td>Year of Passing</td>
+                            <td>Division/Marks</td>
+                        </tr>
+                        <tr>
+                            <td>10th</td>
+                            <td>
+                                <input type="text" name="10_univ" size="20" maxlength="50">
+                            </td>
+                            <td>
+                                <input type="text" name="10_year" size="20" maxlength="50">
+                            </td>
+                            <td>
+                                <input type="text" name="10_div" size="20" maxlength="50">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12th</td>
+                            <td>
+                                <input type="text" name="12_univ" size="20" maxlength="50">
+                            </td>
+                            <td>
+                                <input type="text" name="12_year" size="20" maxlength="50">
+                            </td>
+                            <td>
+                                <input type="text" name="12_div" size="20" maxlength="50">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Other Information<textarea rows="3" cols="40">Enter text 
+here.....</textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+    <footer>
+        <hr>&copy; 2013 IGNOU
+    </footer>
+    <p align="right"><a href="#top">Return to Top</a></p>
+</body>
+
+</html>

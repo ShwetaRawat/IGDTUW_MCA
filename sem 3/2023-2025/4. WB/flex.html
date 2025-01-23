@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Property Examples</title>
+    <style>
+        /* Basic container styling */
+        .container {
+            display: flex;
+            gap: 10px; /* Adds space between flex items */
+            padding: 10px;
+            background-color: #f4f4f4;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+        }
+
+        /* Example 1: Equal Flex Grow */
+        .container1 .box {
+            flex: 1;
+        }
+
+        /* Example 2: Different Flex Grow */
+        .container2 .box1 {
+            flex: 1; /* Grows at 1 part */
+        }
+
+        .container2 .box2 {
+            flex: 2; /* Grows at 2 parts */
+        }
+
+        /* Example 3: Flex Shrink */
+        .container3 .box1 {
+            flex: 1 1 200px; /* Can grow and shrink, starts at 200px */
+        }
+
+        .container3 .box2 {
+            flex: 1 0 200px; /* Can grow but cannot shrink */
+        }
+
+        /* Example 4: Flex Basis with Fixed Width */
+        .container4 .box {
+            flex-basis: 100px; /* Each item starts at 100px */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Flex Property Examples</h1>
+
+    <!-- Example 1: Equal Flex Grow -->
+    <h2>Example 1: Equal Flex Grow (flex: 1)</h2>
+    <div class="container container1">
+        <div class="box">Item 1</div>
+        <div class="box">Item 2</div>
+        <div class="box">Item 3</div>
+    </div>
+
+    <!-- Example 2: Different Flex Grow -->
+    <h2>Example 2: Different Flex Grow (flex: 1 and flex: 2)</h2>
+    <div class="container container2">
+        <div class="box box1">Item 1</div>
+        <div class="box box2">Item 2</div>
+    </div>
+
+    <!-- Example 3: Flex Shrink -->
+    <h2>Example 3: Flex Shrink (flex-shrink: 1 vs flex-shrink: 0)</h2>
+    <div class="container container3">
+        <div class="box box1">Item 1</div>
+        <div class="box box2">Item 2</div>
+    </div>
+
+    <!-- Example 4: Flex Basis with Fixed Width -->
+    <h2>Example 4: Flex Basis with Fixed Width (flex-basis: 100px)</h2>
+    <div class="container container4">
+        <div class="box">Item 1</div>
+        <div class="box">Item 2</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery AJAX Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#loadDataButton").click(function() {
+                $.ajax({
+                    url: "https://api.github.com/users", // Sample API
+                    method: "GET",
+                    success: function(data) {
+                        let users = data.map(user => `<li>${user.login}</li>`).join("");
+                        $("#userList").html(users);
+                    },
+                    error: function() {
+                        alert("Error loading data.");
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="loadDataButton">Load Users</button>
+    <ul id="userList"></ul>
+</body>
+</html>
