@@ -1,0 +1,150 @@
+
+<!-- saved from url=(0076)https://courses.cs.washington.edu/courses/cse403/96sp/coupling-cohesion.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Coupling and Cohesion</title>
+<!-- Created by: Adam Carlson, 22-Apr-1996 -->
+<!-- Changed by: Adam Carlson, 23-Apr-1996 -->
+
+
+</head>
+<body>
+<h1>COUPLING and COHESION</h1>
+
+<h2>COUPLING</h2>
+
+An indication of the strength of interconnections between program units. <p>
+
+Highly coupled have program units dependent on each other.  Loosely coupled
+are made up of units that are independent or almost independent. </p><p>
+
+Modules are independent if they can function completely without the presence of
+the other.  Obviously, can't have modules completely independent of each other.
+Must interact so that can produce desired outputs.  The more connections
+between modules, the more dependent they are in the sense that more info
+about one modules is required to understand the other module. </p><p>
+
+Three factors: number of interfaces, complexity of interfaces, type of
+info flow along interfaces. </p><p>
+
+Want to minimize number of interfaces between modules, minimize the
+complexity of each interface, and control the type of info flow.  An interface 
+of a module is used to pass information to and from other modules. </p><p>
+
+In general, modules tightly coupled if they use shared variables or if 
+they exchange control info. </p><p>
+
+Loose coupling if info held within a unit and interface with other units
+via parameter lists.  Tight coupling if shared global data. </p><p>
+
+If need only one field of a record, don't pass entire record.  Keep interface
+as simple and small as possible. </p><p>
+
+Two types of info flow: data or control.   </p><p>
+
+</p><ul>
+ <li> Passing or receiving back control info means that the action of the
+module will depend on this control info, which makes it difficult to
+understand the module.
+ </li><li> Interfaces with only data communication result in lowest degree of
+coupling, followed by interfaces that only transfer control data.  Highest if
+data is hybrid.
+</li></ul>
+
+Ranked highest to lowest:
+<ol>
+<li> Content coupling: if one directly references the contents of the other. <p>
+
+When one module modifies local data values or instructions in another
+module. (can happen in assembly language) </p><p>
+
+if one refers to local data in another module. </p><p>
+
+if one branches into a local label of another. </p><p>
+
+</p></li><li> Common coupling: access to global data. <p>
+
+modules bound together by global data structures. </p><p>
+
+</p></li><li> Control coupling: passing control flags (as parameters or globals) so
+that one module controls the sequence of processing steps in another module. <p>
+
+</p></li><li> Stamp coupling: similar to common coupling except that global variables
+are shared selectively among routines that require the data.  E.g., packages
+in Ada.  More desirable than common coupling because fewer modules will have
+to be modified if a shared data structure is modified.  Pass entire data
+structure but need only parts of it. <p>
+
+</p></li><li> Data coupling: use of parameter lists to pass data items between routines.
+
+</li></ol>
+
+<hr>
+
+<h2>COHESION</h2>
+
+Measure of how well module fits together.   <p>
+
+A component should implement a single logical function or single logical 
+entity.  All the parts should contribute to the implementation. </p><p>
+
+Many levels of cohesion: </p><p>
+
+</p><ol>
+<li> Coincidental cohesion: the parts of a component are not related but
+simply bundled into a single component. <p>
+
+      harder to understand and not reusable. </p><p>
+
+</p></li><li> Logical association: similar functions such as input, error handling,
+etc. put together.  Functions fall in same logical class.  May pass a
+flag to determine which ones executed. <p>
+
+     interface difficult to understand.  Code for more than one function may be
+     intertwined, leading to severe maintenance problems.  Difficult to reuse </p><p>
+
+</p></li><li> Temporal cohesion: all of statements activated at a single time, such
+as start up or shut down, are brought together.  Initialization, clean up. <p>
+
+     Functions weakly related to one another, but more strongly related to
+     functions in other modules so may need to change lots of modules when
+     do maintenance. </p><p>
+
+</p></li><li> Procedural cohesion: a single control sequence, e.g., a loop or sequence
+of decision statements.  Often cuts across functional lines.  May contain
+only part of a complete function or parts of several functions. <p>
+
+     Functions still weakly connected, and again unlikely to be reusable in
+     another product. </p><p>
+
+</p></li><li> Communicational cohesion: operate on same input data or produce same
+output data.  May be performing more than one function.  Generally acceptable
+if alternate structures with higher cohesion cannot be easily identified. <p>
+
+     still problems with reusability. </p><p>
+
+</p></li><li> Sequential cohesion: output from one part serves as input for another
+part.  May contain several functions or parts of different functions. <p>
+
+</p></li><li> Informational cohesion: performs a number of functions, each with its own
+entry point, with independent code for each function, all performed on same
+data structure.  Different than logical cohesion because functions not 
+intertwined.   <p>
+
+</p></li><li> Functional cohesion: each part necessary for execution of a single
+function.  e.g., compute square root or sort the array. <p>
+
+Usually reusable in other contexts.  Maintenance easier. </p><p>
+
+</p></li><li> Type cohesion: modules that support a data abstraction. <p>
+
+Not strictly a linear scale.  Functional much stronger than rest while first
+two much weaker than others.  Often many levels may be applicable when
+considering two elements of a module.  Cohesion of module considered as
+highest level of cohesion that is applicable to all elements in the module.
+</p></li></ol>
+
+<hr>
+
+<address> <a name="Signature" href="https://courses.cs.washington.edu/courses/cse403/96sp/coupling-cohesion.html">Adam Carlson</a></address>
+
+</body></html>
