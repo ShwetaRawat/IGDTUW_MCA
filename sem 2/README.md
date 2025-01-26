@@ -21,7 +21,7 @@
 ---
 
 ## 🛠️ Software Engineering
-- [Software Engineering Playlist](https://youtube.com/playlist?list=PL6e4nN_wfMVuxCxQbUmEfliMnm9lGTroz&feature=shared)
+- [Software Engineering - Unit 1 & 2 Playlist](https://youtube.com/playlist?list=PL6e4nN_wfMVuxCxQbUmEfliMnm9lGTroz&feature=shared)
 
 
 Happy Learning!
